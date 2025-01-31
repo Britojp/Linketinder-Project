@@ -1,3 +1,4 @@
+import br.com.liketinder.controller.match.Match
 import br.com.liketinder.models.empresa.Empresa
 import br.com.liketinder.models.menu.Menu
 import br.com.liketinder.models.pessoa.PessoaFisica
@@ -20,7 +21,9 @@ static void main(String[] args) {
           new Empresa("Segurança Digital", "security@segdigital.com", "56.789.123/0001-77", "Brasil", "SC", "40000-000", "Empresa de cibersegurança para proteção de sistemas empresariais.", ["CyberSecurity", "Pentest", "Kali Linux"]),
           new Empresa("CloudHub", "cloud@cloudhub.com", "67.890.234/0001-88", "Brasil", "BA", "50000-000", "Provedora de soluções em nuvem e DevOps.", ["AWS", "Docker", "Kubernetes"])
   ]
-
+  Match sistemaDeMatch = new Match()
   Menu menu = new Menu(candidatos, empresas)
-  menu.exibirMenu()
+
+  sistemaDeMatch.candidatoCurteEmpresa(candidatos[0], empresas[0]);
+  sistemaDeMatch.empresaCurteCandidato(empresas[0],candidatos[0]);
 }

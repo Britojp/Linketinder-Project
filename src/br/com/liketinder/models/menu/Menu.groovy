@@ -3,8 +3,6 @@ package br.com.liketinder.models.menu
 import br.com.liketinder.models.pessoa.PessoaFisica
 import br.com.liketinder.models.empresa.Empresa
 
-import java.util.Scanner
-
 class Menu {
     private List<PessoaFisica> candidatos = []
     private List<Empresa> empresas = []
